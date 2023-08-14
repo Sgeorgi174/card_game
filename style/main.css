@@ -1,0 +1,92 @@
+@font-face {
+    font-family: skypro_f;
+    src: url(../style/fonts/stratosskyengweb-regular.woff2);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 73, 128, 1);
+    font-family: skypro_f ,sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.first-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-page__wrapper {
+    width: 480px;
+    background-color: rgba(194, 245, 255, 1);
+    border-radius: 12px;
+    padding: 52px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-page__title {
+    text-align: center;
+    font-size: 40px;
+    color: rgba(0, 73, 128, 1);
+}
+
+.first-page__difficulties {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.first-page__difficulty {
+    width: 98px;
+    height: 98px;
+    background-color:rgba(255, 255, 255, 1);
+    border-radius: 12px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: skypro_f ,sans-serif;
+    font-size: 64px;
+    color:rgba(0, 128, 193, 1);
+    transition:  color 0.2s linear, background 0.2s linear
+}
+
+.first-page__difficulty:hover {
+    background-color: rgba(0, 128, 193, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.first-page__start-btn {
+    margin-top: 67px;
+    width: 246px;
+    height: 48px;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+
+    background-color:rgba(122, 193, 0, 1);
+
+    color: rgba(255, 255, 255, 1);
+    font-family: skypro_f ,sans-serif;
+    font-size: 24px;
+    transition: background 0.2s linear
+}
+
+.first-page__start-btn:hover {
+    background-color: rgb(16, 161, 11);
+}
