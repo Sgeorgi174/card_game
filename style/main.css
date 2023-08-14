@@ -1,6 +1,6 @@
 @font-face {
     font-family: skypro_f;
-    src: url(../style/fonts/stratosskyengweb-regular.woff2);
+    src: url(../fonts/stratosskyengweb-regular.woff2);
 }
 
 body {
@@ -42,32 +42,41 @@ button {
 
 .first-page__difficulties {
     margin-top: 48px;
+    font-family: skypro_f ,sans-serif;
+    font-size: 64px;
+    color: rgba(0, 128, 193, 1); 
+}
+
+.first-page__btn-wrapper input[type="radio"] {
+    display: none;
+}
+
+.first-page__btn-wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 24px;
 }
 
-.first-page__difficulty {
-    width: 98px;
-    height: 98px;
-    background-color:rgba(255, 255, 255, 1);
-    border-radius: 12px;
-    cursor: pointer;
-
+.first-page__btn-wrapper label {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    font-family: skypro_f ,sans-serif;
-    font-size: 64px;
-    color:rgba(0, 128, 193, 1);
-    transition:  color 0.2s linear, background 0.2s linear
+    width: 98px;
+    height: 98px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+
+    transition: color 0.2s linear, background 0.2s linear;
 }
 
-.first-page__difficulty:hover {
+.first-page__btn-wrapper input[type="radio"]:checked+label {
     background-color: rgba(0, 128, 193, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.first-page__btn-wrapper label:hover {
+    background-color: rgb(118, 192, 230);
     color: rgba(255, 255, 255, 1);
 }
 
@@ -78,7 +87,6 @@ button {
     outline: none;
     border: none;
     border-radius: 12px;
-
     background-color:rgba(122, 193, 0, 1);
 
     color: rgba(255, 255, 255, 1);
