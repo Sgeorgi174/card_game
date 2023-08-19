@@ -73,6 +73,28 @@ button {
 .first-page__btn-wrapper input[type="radio"]:checked+label {
     background-color: rgba(0, 128, 193, 1);
     color: rgba(255, 255, 255, 1);
+    position: relative;
+}
+
+.first-page__btn-wrapper input[type="radio"][value="1"]:checked+label::after {
+    content: 'Easy';
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+}
+
+.first-page__btn-wrapper input[type="radio"][value="2"]:checked+label::after {
+    content: 'Medium';
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+}
+
+.first-page__btn-wrapper input[type="radio"][value="3"]:checked+label::after {
+    content: 'Hard';
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
 }
 
 .first-page__btn-wrapper label:hover {
@@ -97,4 +119,20 @@ button {
 
 .first-page__start-btn:hover {
     background-color: rgb(16, 161, 11);
+}
+
+.easy-page__title {
+    text-align: center;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.loader {
+    width: 250px;
+}
+
+.loader__wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
