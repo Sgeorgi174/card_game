@@ -20,7 +20,7 @@ export let userSettings = {
   time: 0,
   // храним сложность игры
   difficulty: null,
-  //храним текущий статус игры choose difficulty level/on game page/plaing game/result
+  //храним текущий статус игры choose-difficulty-level/on-the-game-page/playing-the-game/result
   gameStatus: null,
 };
 
@@ -33,27 +33,27 @@ export const goToPage = (page) => {
     [EASY_PAGE, FIRST_PAGE, HARD_PAGE, MEDIUM_PAGE, LOADING_PAGE].includes(page)
   ) {
     if (page === FIRST_PAGE) {
-      userSettings.gameStatus = "choose difficulty level";
+      userSettings.gameStatus = "choose-difficulty-level";
       renderApp();
     }
 
     if (page === EASY_PAGE) {
       userSettings.difficulty = "easy";
-      userSettings.gameStatus = "on game page";
+      userSettings.gameStatus = "on-the-game-page";
       console.log(userSettings);
       renderApp();
     }
 
     if (page === MEDIUM_PAGE) {
       userSettings.difficulty = "medium";
-      userSettings.gameStatus = "on game page";
+      userSettings.gameStatus = "on-the-game-page";
       console.log(userSettings);
       renderApp();
     }
 
     if (page === HARD_PAGE) {
       userSettings.difficulty = "hard";
-      userSettings.gameStatus = "on game page";
+      userSettings.gameStatus = "on-the-game-page";
       console.log(userSettings);
       renderApp();
     }
