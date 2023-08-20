@@ -1,7 +1,8 @@
-import { renderEasyPageComponent } from "./components/easy-page-components.js";
+import {
+  renderGamePage,
+  renderGame,
+} from "./components/game-page-components.js";
 import { renderFirstPageComponent } from "./components/first-page-components.js";
-import { renderMediumPageComponent } from "./components/medium-page-components.js";
-import { renderHardPageComponent } from "./components/hard-page-components.js";
 import { renderLoadingPageComponent } from "./components/loading-page-components.js";
 import {
   EASY_PAGE,
@@ -66,16 +67,8 @@ export const goToPage = (page) => {
 
 export const renderApp = () => {
   const appEl = document.getElementById("app");
-  if (page === EASY_PAGE) {
-    return renderEasyPageComponent(appEl);
-  }
-
-  if (page === MEDIUM_PAGE) {
-    return renderMediumPageComponent(appEl);
-  }
-
-  if (page === HARD_PAGE) {
-    return renderHardPageComponent(appEl);
+  if (page === EASY_PAGE || page === MEDIUM_PAGE || page === HARD_PAGE) {
+    return renderGamePage(appEl);
   }
 
   if (page === FIRST_PAGE) {
@@ -83,7 +76,7 @@ export const renderApp = () => {
   }
 
   if (page === LOADING_PAGE) {
-    renderLoadingPageComponent(appEl);
+    return renderLoadingPageComponent(appEl);
   }
 };
 
