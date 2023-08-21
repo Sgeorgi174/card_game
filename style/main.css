@@ -1,14 +1,14 @@
 @font-face {
-    font-family: skypro_f;
-    src: url(../fonts/stratosskyengweb-regular.woff2);
+    font-family: 'skypro_f';
+    src: url('../fonts/stratosskyengweb-regular.woff2');
 }
 
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgba(0, 73, 128, 1);
-    font-family: skypro_f ,sans-serif;
+    background-color: rgb(0 73 128 / 100%);
+    font-family: 'skypro_f', sans-serif;
 }
 
 button {
@@ -24,10 +24,9 @@ button {
 
 .first-page__wrapper {
     width: 480px;
-    background-color: rgba(194, 245, 255, 1);
+    background-color: rgb(194 245 255 / 100%);
     border-radius: 12px;
     padding: 52px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,17 +36,17 @@ button {
 .first-page__title {
     text-align: center;
     font-size: 40px;
-    color: rgba(0, 73, 128, 1);
+    color: rgb(0 73 128 / 100%);
 }
 
 .first-page__difficulties {
     margin-top: 48px;
-    font-family: skypro_f ,sans-serif;
+    font-family: 'skypro_f', sans-serif;
     font-size: 64px;
-    color: rgba(0, 128, 193, 1); 
+    color: rgb(0 128 193 / 100%);
 }
 
-.first-page__btn-wrapper input[type="radio"] {
+.first-page__btn-wrapper input[type='radio'] {
     display: none;
 }
 
@@ -60,46 +59,46 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 98px;
     height: 98px;
     border-radius: 12px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 1);
-
-    transition: color 0.2s linear, background 0.2s linear;
+    background-color: rgb(255 255 255 / 100%);
+    transition:
+        color 0.2s linear,
+        background 0.2s linear;
 }
 
-.first-page__btn-wrapper input[type="radio"]:checked+label {
-    background-color: rgba(0, 128, 193, 1);
-    color: rgba(255, 255, 255, 1);
+.first-page__btn-wrapper label:hover {
+    background-color: rgb(118 192 230);
+    color: rgb(255 255 255 / 100%);
+}
+
+.first-page__btn-wrapper input[type='radio']:checked + label {
+    background-color: rgb(0 128 193 / 100%);
+    color: rgb(255 255 255 / 100%);
     position: relative;
 }
 
-.first-page__btn-wrapper input[type="radio"][value="1"]:checked+label::after {
+.first-page__btn-wrapper input[type='radio'][value='1']:checked + label::after {
     content: 'Easy';
     position: absolute;
     bottom: 0;
     font-size: 14px;
 }
 
-.first-page__btn-wrapper input[type="radio"][value="2"]:checked+label::after {
+.first-page__btn-wrapper input[type='radio'][value='2']:checked + label::after {
     content: 'Medium';
     position: absolute;
     bottom: 0;
     font-size: 14px;
 }
 
-.first-page__btn-wrapper input[type="radio"][value="3"]:checked+label::after {
+.first-page__btn-wrapper input[type='radio'][value='3']:checked + label::after {
     content: 'Hard';
     position: absolute;
     bottom: 0;
     font-size: 14px;
-}
-
-.first-page__btn-wrapper label:hover {
-    background-color: rgb(118, 192, 230);
-    color: rgba(255, 255, 255, 1);
 }
 
 .first-page__start-btn {
@@ -109,22 +108,21 @@ button {
     outline: none;
     border: none;
     border-radius: 12px;
-    background-color:rgba(122, 193, 0, 1);
-
-    color: rgba(255, 255, 255, 1);
-    font-family: skypro_f ,sans-serif;
+    background-color: rgb(122 193 0 / 100%);
+    color: rgb(255 255 255 / 100%);
+    font-family: 'skypro_f', sans-serif;
     font-size: 24px;
-    transition: background 0.2s linear
+    transition: background 0.2s linear;
 }
 
 .first-page__start-btn:hover {
-    background-color: rgb(16, 161, 11);
+    background-color: rgb(16 161 11);
 }
 
 .easy-page__title {
     text-align: center;
     font-size: 40px;
-    color: rgba(255, 255, 255, 1);
+    color: rgb(255 255 255 / 100%);
 }
 
 .loader {

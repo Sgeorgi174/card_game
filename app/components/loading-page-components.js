@@ -1,5 +1,5 @@
 export const renderLoadingPageComponent = (appEl) => {
-  const loaderHtml = `
+    const loaderHtml = `
   <div class="loader__wrapper">
 <svg class="loader" version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
@@ -39,5 +39,5 @@ export const renderLoadingPageComponent = (appEl) => {
 </svg>
 </div>
 `;
-  appEl.innerHTML = loaderHtml;
+    appEl.innerHTML = loaderHtml;
 };
