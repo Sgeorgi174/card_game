@@ -1,5 +1,5 @@
-import { renderGamePage } from './components/game-page-components.js';
 import { renderFirstPageComponent } from './components/first-page-components.js';
+import { renderGamePage } from './components/game-page-component.js';
 import { renderLoadingPageComponent } from './components/loading-page-components.js';
 import {
     EASY_PAGE,

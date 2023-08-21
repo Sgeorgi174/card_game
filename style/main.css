@@ -3,16 +3,23 @@
     src: url('../fonts/stratosskyengweb-regular.woff2');
 }
 
-body {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
     background-color: rgb(0 73 128 / 100%);
     font-family: 'skypro_f', sans-serif;
 }
 
 button {
     cursor: pointer;
+}
+
+.app {
+    padding: 50px;
 }
 
 .first-page {
@@ -133,4 +140,95 @@ button {
     height: 100vh;
     display: flex;
     justify-content: center;
+}
+
+.interface-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.interface-timer {
+    font-size: 64px;
+    color: rgb(255 255 255 / 100%);
+}
+
+.control-button {
+    width: 246px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: rgb(122 193 0 / 100%);
+    border-radius: 12px;
+    font-family: 'skypro_f', sans-serif;
+    font-size: 24px;
+    color: rgb(255 255 255 / 100%);
+}
+
+.cards-container {
+    padding: 0 70px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 15px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.card {
+    width: 95px;
+    height: 133px;
+    background-color: white;
+    align-self: center;
+    padding: 0 5px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 32px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card_easy {
+    width: 180px;
+    height: 260px;
+}
+
+.card_back {
+    background-image: url('../img/card_back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-left {
+    max-width: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-suit {
+    justify-items: center;
+    align-self: center;
+}
+
+.card-suit_small {
+    transform: rotate(180deg);
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: start;
+}
+
+.card-right {
+    max-width: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+    align-self: flex-end;
 }
