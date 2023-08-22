@@ -8,7 +8,6 @@ import {
     MEDIUM_PAGE,
     LOADING_PAGE,
 } from './routes.js';
-
 export let page = FIRST_PAGE;
 
 export let userSettings = {
