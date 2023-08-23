@@ -193,7 +193,7 @@ export const renderGamePage = (appEl) => {
                     <div class="card">
                     <div class="card-left">
                         <div class="card-name">6</div>
-                        <div class="card-suit card-suit_small"><img width="9px" src="./img/suit/spades.png" alt=""></div>
+                        <div class="card-suit card-suit_small"><img width="9px" src="./img/suit/hearts.png" alt=""></div>
                     </div>
                     <div class="card-suit"><img src="./img/suit/spades.png" alt=""></div>
                     <div class="card-right">
@@ -588,12 +588,12 @@ export const renderGamePage = (appEl) => {
                     <div class="card">
                     <div class="card-left">
                         <div class="card-name">6</div>
-                        <div class="card-suit card-suit_small"><img width="9px" src="./img/suit/spades.png" alt=""></div>
+                        <div class="card-suit card-suit_small"><img width="9px" src="./img/suit/hearts.png" alt=""></div>
                     </div>
                     <div class="card-suit"><img src="./img/suit/spades.png" alt=""></div>
                     <div class="card-right">
                         <div class="card-name">A</div>
-                        <div class="card-suit card-suit_small"><img width="9px" src="./img/suit/spades.png" alt=""></div>
+                        <div class="card-suit card-suit_small"><img width="9px" src="./img/suit/hearts.png" alt=""></div>
                     </div>            
                 </div>
                 <div class="card">
@@ -982,12 +982,12 @@ export const renderGamePage = (appEl) => {
                     <div class="card">
                     <div class="card-left">
                         <div class="card-name">6</div>
-                        <div class="card-suit card-suit_small"><img width="9px" src="./img/suit/spades.png" alt=""></div>
+                        <div class="card-suit card-suit_small"><img width="9px" src="./img/suit/hearts.png" alt=""></div>
                     </div>
                     <div class="card-suit"><img src="./img/suit/spades.png" alt=""></div>
                     <div class="card-right">
                         <div class="card-name">A</div>
-                        <div class="card-suit card-suit_small"><img width="9px" src="./img/suit/spades.png" alt=""></div>
+                        <div class="card-suit card-suit_small"><img width="9px" src="./img/suit/hearts.png" alt=""></div>
                     </div>            
                 </div>
                 <div class="card">
