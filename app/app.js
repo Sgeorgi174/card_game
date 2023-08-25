@@ -1,3 +1,4 @@
+import '../style/main.css';
 import { renderFirstPageComponent } from './components/first-page-components.js';
 import { renderGamePage } from './components/game-page-component.js';
 import { renderLoadingPageComponent } from './components/loading-page-components.js';
@@ -8,6 +9,7 @@ import {
     MEDIUM_PAGE,
     LOADING_PAGE,
 } from './routes.js';
+
 export let page = FIRST_PAGE;
 
 export let userSettings = {
@@ -23,6 +25,10 @@ export let userSettings = {
 
 export const setPage = (newPage) => {
     page = newPage;
+};
+
+export const setNewStatus = (newStatus) => {
+    userSettings.gameStatus = newStatus;
 };
 
 export const goToPage = (page) => {
