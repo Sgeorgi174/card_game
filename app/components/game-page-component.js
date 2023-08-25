@@ -100,7 +100,7 @@ export const renderGamePage = (appEl) => {
 
     const playGame = () => {
         let pageNow = page;
-        let cardForCompaire = [];
+        let cardForCompare = [];
         const deathSound = document.getElementById('death');
         const rightSound = document.getElementById('right');
         const startSound = document.getElementById('start');
@@ -114,18 +114,18 @@ export const renderGamePage = (appEl) => {
                 card.addEventListener('click', () => {
                     flipCard(card);
                     delay(1000).then(() => {
-                        cardForCompaire.push(card.dataset.card);
-                        if (cardForCompaire.length % 2 === 0) {
+                        cardForCompare.push(card.dataset.card);
+                        if (cardForCompare.length % 2 === 0) {
                             if (
-                                cardForCompaire[0] !== cardForCompaire[1] ||
-                                cardForCompaire[2] !== cardForCompaire[3] ||
-                                cardForCompaire[4] !== cardForCompaire[5] ||
-                                cardForCompaire[6] !== cardForCompaire[7] ||
-                                cardForCompaire[8] !== cardForCompaire[9] ||
-                                cardForCompaire[10] !== cardForCompaire[11] ||
-                                cardForCompaire[12] !== cardForCompaire[13] ||
-                                cardForCompaire[14] !== cardForCompaire[15] ||
-                                cardForCompaire[16] !== cardForCompaire[17]
+                                cardForCompare[0] !== cardForCompare[1] ||
+                                cardForCompare[2] !== cardForCompare[3] ||
+                                cardForCompare[4] !== cardForCompare[5] ||
+                                cardForCompare[6] !== cardForCompare[7] ||
+                                cardForCompare[8] !== cardForCompare[9] ||
+                                cardForCompare[10] !== cardForCompare[11] ||
+                                cardForCompare[12] !== cardForCompare[13] ||
+                                cardForCompare[14] !== cardForCompare[15] ||
+                                cardForCompare[16] !== cardForCompare[17]
                             ) {
                                 deathSound.play();
                                 delay(1000).then(() => {
@@ -141,7 +141,8 @@ export const renderGamePage = (appEl) => {
                                 rightSound.play();
                                 rightSound.volume = 1;
                             }
-                            if (cardForCompaire.length === cards.length) {
+
+                            if (cardForCompare.length === cards.length) {
                                 alert('you win!!');
                             }
                         }
