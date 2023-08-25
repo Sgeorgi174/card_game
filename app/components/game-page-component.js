@@ -110,43 +110,42 @@ export const renderGamePage = (appEl) => {
         startSound.play();
         delay(5000).then(() => {
             flipAllCards(cardsList);
-        });
-
-        cardsList.forEach((card) => {
-            card.addEventListener('click', () => {
-                flipCard(card);
-                delay(1000).then(() => {
-                    cardForCompaire.push(card.dataset.card);
-                    if (cardForCompaire.length % 2 === 0) {
-                        if (
-                            cardForCompaire[0] !== cardForCompaire[1] ||
-                            cardForCompaire[2] !== cardForCompaire[3] ||
-                            cardForCompaire[4] !== cardForCompaire[5] ||
-                            cardForCompaire[6] !== cardForCompaire[7] ||
-                            cardForCompaire[8] !== cardForCompaire[9] ||
-                            cardForCompaire[10] !== cardForCompaire[11] ||
-                            cardForCompaire[12] !== cardForCompaire[13] ||
-                            cardForCompaire[14] !== cardForCompaire[15] ||
-                            cardForCompaire[16] !== cardForCompaire[17]
-                        ) {
-                            deathSound.play();
-                            delay(1000).then(() => {
-                                alert('you lose!!');
-                                setPage(LOADING_PAGE);
-                                goToPage(page);
+            cardsList.forEach((card) => {
+                card.addEventListener('click', () => {
+                    flipCard(card);
+                    delay(1000).then(() => {
+                        cardForCompaire.push(card.dataset.card);
+                        if (cardForCompaire.length % 2 === 0) {
+                            if (
+                                cardForCompaire[0] !== cardForCompaire[1] ||
+                                cardForCompaire[2] !== cardForCompaire[3] ||
+                                cardForCompaire[4] !== cardForCompaire[5] ||
+                                cardForCompaire[6] !== cardForCompaire[7] ||
+                                cardForCompaire[8] !== cardForCompaire[9] ||
+                                cardForCompaire[10] !== cardForCompaire[11] ||
+                                cardForCompaire[12] !== cardForCompaire[13] ||
+                                cardForCompaire[14] !== cardForCompaire[15] ||
+                                cardForCompaire[16] !== cardForCompaire[17]
+                            ) {
+                                deathSound.play();
                                 delay(1000).then(() => {
-                                    setPage(pageNow);
+                                    alert('you lose!!');
+                                    setPage(LOADING_PAGE);
                                     goToPage(page);
+                                    delay(1000).then(() => {
+                                        setPage(pageNow);
+                                        goToPage(page);
+                                    });
                                 });
-                            });
-                        } else {
-                            rightSound.play();
-                            rightSound.volume = 1;
+                            } else {
+                                rightSound.play();
+                                rightSound.volume = 1;
+                            }
+                            if (cardForCompaire.length === cards.length) {
+                                alert('you win!!');
+                            }
                         }
-                        if (cardForCompaire.length === cards.length) {
-                            alert('you win!!');
-                        }
-                    }
+                    });
                 });
             });
         });
