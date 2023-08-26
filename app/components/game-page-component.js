@@ -108,6 +108,7 @@ export const renderGamePage = (appEl) => {
         renderInterface(interfaceElement);
         flipAllCards(cardsList);
         startSound.play();
+        startSound.volume = 0.3;
         delay(5000).then(() => {
             flipAllCards(cardsList);
             cardsList.forEach((card) => {
