@@ -140,7 +140,7 @@ export const renderGamePage = (appEl) => {
                                 });
                             } else {
                                 rightSound.play();
-                                rightSound.volume = 1;
+                                rightSound.volume = 0.5;
                             }
 
                             if (cardForCompare.length === cards.length) {
