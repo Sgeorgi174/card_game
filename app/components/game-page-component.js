@@ -91,7 +91,6 @@ export const renderGamePage = (appEl) => {
     const interfaceElement = document.querySelector('.interface-container');
     renderInterface(interfaceElement);
 
-    const cardsList = document.querySelectorAll('.card-flip');
     const startBtn = document.getElementById('control-button');
 
     startBtn.addEventListener('click', () => {
@@ -163,6 +162,7 @@ export const renderGamePage = (appEl) => {
         });
     };
 
+    const cardsList = document.querySelectorAll('.card-flip');
     const flipCard = (cardElement) => {
         cardElement.classList.toggle('is-flipped');
     };
