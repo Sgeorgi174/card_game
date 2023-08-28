@@ -1,4 +1,4 @@
-export const renderLoadingPageComponent = (appEl) => {
+export const renderLoadingPageComponent = (appEl: HTMLElement) => {
     const loaderHtml = `
   <div class="loader__wrapper">
 <svg class="loader" version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

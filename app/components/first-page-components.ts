@@ -1,8 +1,8 @@
-import { goToPage, setPage, page } from '../app.js';
-import { EASY_PAGE, HARD_PAGE, LOADING_PAGE, MEDIUM_PAGE } from '../routes.js';
-import { delay } from '../modules/delay.js';
+import { goToPage, setPage, page } from '../app';
+import { EASY_PAGE, HARD_PAGE, LOADING_PAGE, MEDIUM_PAGE } from '../routes';
+import { delay } from '../modules/delay';
 
-export function renderFirstPageComponent(appEl) {
+export function renderFirstPageComponent(appEl: HTMLElement) {
     let firstPageHtml = `
     <section class="first-page">
         <div class="first-page__wrapper">
@@ -26,11 +26,11 @@ export function renderFirstPageComponent(appEl) {
 
     appEl.innerHTML = firstPageHtml;
 
-    const easyBtn = document.getElementById('easy');
-    const mediumBtn = document.getElementById('medium');
-    const hardBtn = document.getElementById('hard');
-    const startBtn = document.getElementById('start');
-    const btnCollection = [easyBtn, mediumBtn, hardBtn];
+    const easyBtn = document.getElementById('easy') as HTMLElement;
+    const mediumBtn = document.getElementById('medium') as HTMLElement;
+    const hardBtn = document.getElementById('hard') as HTMLElement;
+    const startBtn = document.getElementById('start') as HTMLElement;
+    const btnCollection = [easyBtn, mediumBtn, hardBtn] as const;
 
     btnCollection.forEach((el) => {
         el.addEventListener('click', () => {

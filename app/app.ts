@@ -1,37 +1,45 @@
 import '../style/main.css';
-import { renderFirstPageComponent } from './components/first-page-components.js';
-import { renderGamePage } from './components/game-page-component.js';
-import { renderLoadingPageComponent } from './components/loading-page-components.js';
+import { renderFirstPageComponent } from './components/first-page-components';
+import { renderGamePage } from './components/game-page-component';
+import { renderLoadingPageComponent } from './components/loading-page-components';
 import {
     EASY_PAGE,
     FIRST_PAGE,
     HARD_PAGE,
     MEDIUM_PAGE,
     LOADING_PAGE,
-} from './routes.js';
+} from './routes';
 
 export let page = FIRST_PAGE;
 
-export let userSettings = {
-    // храним набранные очки(будут вычисляться через время и возможно коэффициент сложности)
-    score: 0,
+export let userSettings: userSet = {
     // храним время игры
-    time: 0,
+    time: '0',
     // храним сложность игры
-    difficulty: null,
-    //храним текущий статус игры choose-difficulty-level/on-the-game-page/playing-the-game/result
-    gameStatus: null,
+    difficulty: '',
+    //храним текущий статус игры choose-difficulty-level/on-the-game-page/playing-the-game/result-congrats/result-dead
+    gameStatus: '',
 };
 
-export const setPage = (newPage) => {
+interface userSet {
+    time: string;
+    difficulty: string;
+    gameStatus: string;
+}
+
+export const setPage = (newPage: string) => {
     page = newPage;
 };
 
-export const setNewStatus = (newStatus) => {
+export const setNewStatus = (newStatus: string) => {
     userSettings.gameStatus = newStatus;
 };
 
-export const goToPage = (page) => {
+export const setTime = (newTime: string) => {
+    userSettings.time = newTime;
+};
+
+export const goToPage = (page: string) => {
     if (
         [EASY_PAGE, FIRST_PAGE, HARD_PAGE, MEDIUM_PAGE, LOADING_PAGE].includes(
             page,
@@ -45,21 +53,21 @@ export const goToPage = (page) => {
         if (page === EASY_PAGE) {
             userSettings.difficulty = 'easy';
             userSettings.gameStatus = 'on-the-game-page';
-            console.log(userSettings);
+            userSettings.time = '00.00';
             renderApp();
         }
 
         if (page === MEDIUM_PAGE) {
             userSettings.difficulty = 'medium';
             userSettings.gameStatus = 'on-the-game-page';
-            console.log(userSettings);
+            userSettings.time = '00.00';
             renderApp();
         }
 
         if (page === HARD_PAGE) {
             userSettings.difficulty = 'hard';
             userSettings.gameStatus = 'on-the-game-page';
-            console.log(userSettings);
+            userSettings.time = '00.00';
             renderApp();
         }
 
@@ -70,7 +78,7 @@ export const goToPage = (page) => {
 };
 
 export const renderApp = () => {
-    const appEl = document.getElementById('app');
+    const appEl = document.getElementById('app') as HTMLElement;
     if (page === EASY_PAGE || page === MEDIUM_PAGE || page === HARD_PAGE) {
         return renderGamePage(appEl);
     }
