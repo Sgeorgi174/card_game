@@ -13,7 +13,7 @@ import { renderInterface } from './game-interface-components';
 
 const suit: string[] = ['hearts', 'clubs', 'diamonds', 'spades'];
 const cardValue: string[] = ['6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
-let cards: card[] = [];
+const cards: card[] = [];
 interface card {
     value: string;
     suit: string;
@@ -120,7 +120,7 @@ export const renderGamePage = (appEl: HTMLElement) => {
     ) as NodeListOf<Element>;
 
     const playGame = () => {
-        let cardForCompare: any[] = [];
+        const cardForCompare: any[] = [];
         const deathSound = document.getElementById('death') as HTMLVideoElement;
         const rightSound = document.getElementById('right') as HTMLVideoElement;
         const startSound = document.getElementById('start') as HTMLVideoElement;

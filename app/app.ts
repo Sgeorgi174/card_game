@@ -12,7 +12,7 @@ import {
 
 export let page = FIRST_PAGE;
 
-export let userSettings: userSet = {
+export const userSettings: userSet = {
     // храним время игры
     time: '0',
     // храним сложность игры

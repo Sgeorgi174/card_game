@@ -3,7 +3,7 @@ import { EASY_PAGE, HARD_PAGE, LOADING_PAGE, MEDIUM_PAGE } from '../routes';
 import { delay } from '../modules/delay';
 
 export function renderFirstPageComponent(appEl: HTMLElement) {
-    let firstPageHtml = `
+    const firstPageHtml = `
     <section class="first-page">
         <div class="first-page__wrapper">
             <div class="first-page__title">Выбери<br>сложность</div>
