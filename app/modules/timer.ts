@@ -1,6 +1,6 @@
 let minutes = 0;
 let seconds = 0;
-let interval: any = '';
+let interval: undefined | ReturnType<typeof setInterval> = undefined;
 
 export function startTimer(htmlElement: HTMLElement) {
     interval = setInterval(() => {

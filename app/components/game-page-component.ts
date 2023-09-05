@@ -120,7 +120,7 @@ export const renderGamePage = (appEl: HTMLElement) => {
     ) as NodeListOf<Element>;
 
     const playGame = () => {
-        const cardForCompare: any[] = [];
+        const cardForCompare: string[] = [];
         const deathSound = document.getElementById('death') as HTMLVideoElement;
         const rightSound = document.getElementById('right') as HTMLVideoElement;
         const startSound = document.getElementById('start') as HTMLVideoElement;
@@ -136,7 +136,7 @@ export const renderGamePage = (appEl: HTMLElement) => {
             flipAllCards(cardsList);
             cardsList.forEach((card) => {
                 if (card instanceof HTMLElement) {
-                    const cardValue = card.dataset.card;
+                    const cardValue = card.dataset.card || '';
                     card.addEventListener('click', () => {
                         flipCard(card);
                         delay(1000).then(() => {
