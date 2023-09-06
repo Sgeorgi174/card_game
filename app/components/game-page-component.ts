@@ -7,6 +7,7 @@ import {
     userSettings,
 } from '../app';
 import { delay } from '../modules/delay';
+import { randomCards } from '../modules/randomCards';
 import { stopTimer } from '../modules/timer';
 import { FIRST_PAGE, LOADING_PAGE } from '../routes';
 import { renderInterface } from './game-interface-components';
@@ -18,25 +19,6 @@ interface card {
     value: string;
     suit: string;
 }
-
-export const randomCards = (
-    suit: string[],
-    cardValue: string[],
-    cards: object[],
-) => {
-    for (let i = 0; i < cards.length; i++) {
-        cards[i] = {
-            suit: `${suit[Math.floor(Math.random() * (3 - 0 + 1))]}`,
-            value: `${cardValue[Math.floor(Math.random() * (8 - 0 + 1))]}`,
-        };
-    }
-
-    cards.forEach((el: object) => {
-        cards.push(el);
-    });
-
-    cards.sort(() => Math.random() - 0.5);
-};
 
 export const renderCards = (cards: card[]) => {
     const cardsHTML = cards
