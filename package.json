@@ -10,8 +10,8 @@
         "lint:css": "stylelint ./style/**/*.css",
         "format:all": "npm run format && npm run lint:ts && npm run lint:css",
         "build": "cross-env NODE_ENV=production webpack",
-        "start": "webpack-dev-server --open",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "start": "webpack-dev-server --open"
     },
     "author": "",
     "license": "ISC",
